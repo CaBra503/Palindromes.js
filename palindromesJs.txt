@@ -1,0 +1,22 @@
+The Palindrome's problem in free code camp is asking me to do a total of four thing.
+Take a string as input, 
+    modify the string.ToLowercase
+    remove punctuation, whitespace, digits.
+    string.replace(regex(whitespacedigit punctuation))
+    return cleanString,
+Run a comparison on the cleanString
+    if cleanString.length === 0
+    return true;
+    if cleanString[i] != cleanString[str.length-1]
+    return false.
+
+Return function(string.)
+
+Regexp flags: \W nonalphanumeric character. \w alphanumeric.
+\d any digits.
+\s whitespace, tab, newline.
+. any character except newline.
+\-/ I believe is -'s?
+I need a global flag and an ignore flag?
+replace(/\W/ g, '');
+
