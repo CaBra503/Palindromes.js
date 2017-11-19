@@ -1,31 +1,32 @@
 //complete 11/18/2017 FreeCodeCamp Palindrome check.
 
-function palindromesChck(str) {
+function palindrome(str) {
 
     // RegExp pattern targeting all nonalphanumeric characters
     // Digits and  punctuations.
-    var regex = /\W\d\s/,
-        g;
+    var regex = /[\W_]g;
     // turning the parameter string into lowercase
     // then replacing the unwanted characters
-    str.toLowerCase().replace(regex, '');
+  cleanString = str.toLowerCase().replace(regex, '');
     //assigning string to new string to run logic
-    cleanString = str;
+    console.log(cleanString);
     //if the strings length equals 0 returns true is a palindrome
     if (cleanString.length === 0) {
-        return true
+        return true;
 
     }
     //if the first letter of the cleanString does not equal the last letter of cleanString return false.
     if (cleanString[0] !== cleanString[cleanString.length - 1]) {
-        return false
+        return false;
         console.log(cleanString);
     }
-    return palindromesChck(cleanString.slice(1, cleanString.length - 1))
+    return palindrome(cleanString.slice(1, cleanString.length - 1))
 }
 
-console.log(palindromesChck('mother'));
-console.log(palindromesChck('abbacadabara'));
+console.log(palindrome('mother'));
+console.log(palindrome('a man, a plan, a dam, a cam'));
+console.log(palindrome('eye'));
+console.log(palindrome('racecar'))
 
 /* Testing a regexp example.
 function f2c(s1) {
