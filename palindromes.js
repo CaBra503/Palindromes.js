@@ -5,11 +5,10 @@ function palindromesChck(str) {
     // RegExp pattern targeting all nonalphanumeric characters
     // Digits and  punctuations.
     var regex = /\W\d\s/,
-        [g];
+        g;
     // turning the parameter string into lowercase
     // then replacing the unwanted characters
-    str.toLowerCase();
-    str.replace(regex, '');
+    str.toLowerCase().replace(regex, '');
     //assigning string to new string to run logic
     cleanString = str;
     //if the strings length equals 0 returns true is a palindrome
@@ -25,9 +24,9 @@ function palindromesChck(str) {
     return palindromesChck(cleanString.slice(1, cleanString.length - 1))
 }
 
-console.log(palindromesChck('rac car'));
+console.log(palindromesChck('mother'));
+console.log(palindromesChck('abbacadabara'));
 
-//complete 11/18/2017
 /* Testing a regexp example.
 function f2c(s1) {
   //initializing pattern.
@@ -41,3 +40,4 @@ replace function with regexp and function match.
     return s2
 }
 console.log(f2c("water Freezes at 32F and boils at 212F.));
+*/
